@@ -1,0 +1,7 @@
+domain: pingcap.com
+repo: test-operator
+resources:
+- group: pingcap
+  kind: BenchmarkSQL
+  version: v1
+version: "2"

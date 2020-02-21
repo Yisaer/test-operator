@@ -1,0 +1,9 @@
+apiVersion: pingcap.pingcap.com/v1
+kind: BenchmarkSQL
+metadata:
+  name: benchmarksql-sample
+spec:
+  conn: jdbc:mysql://test-mysql-svc:3306/tpcc?useSSL=false&useServerPrepStmts=true&useConfigs=maxPerformance&allowPublicKeyRetrieval=true
+  warehouses: 2
+  loadWorkers: 3
+  terminals: 2

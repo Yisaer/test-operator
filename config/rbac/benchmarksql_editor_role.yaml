@@ -1,0 +1,26 @@
+# permissions to do edit benchmarksqls.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: benchmarksql-editor-role
+rules:
+- apiGroups:
+  - pingcap.pingcap.com
+  resources:
+  - benchmarksqls
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - pingcap.pingcap.com
+  resources:
+  - benchmarksqls/status
+  verbs:
+  - get
+  - patch
+  - update
